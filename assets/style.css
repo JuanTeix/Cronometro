@@ -1,0 +1,183 @@
+:root{
+    --font-watch: 'Orbitron', sans-serif;
+    --font-h1: 'Open Sans', sans-serif;
+    --font-mon: 'Montserrat', sans-serif;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #HeaderContainer{
+    display: flex;
+    font-size: 20px;
+    width: 100%;
+    /* flex-direction: column; */
+  }
+  
+  .HeaderH1{
+    width: inherit;
+    text-align: center;
+    font-family: var(--font-mon);
+    font-size: 60px;
+    
+  }
+
+  .CronometroContainer{
+      display: flex;
+      height: 300px;
+      /* border: 1px black solid; */
+      justify-content: center;
+      /* text-align: center; */
+  }
+
+  .CronometroBox{
+        border: 1px black solid;
+        border-radius: 15px;
+        display: flex;
+        width: 500px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin: 20px 0 20px 0;
+        -webkit-box-shadow: 9px -4px 6px -2px rgba(0,0,0,0.71);
+        -moz-box-shadow: 9px -6px 4px -2px rgba(0,0,0,0.71);
+        box-shadow: 9px -4px 6px -2px rgba(0,0,0,0.71);
+        background-color: #222222;
+        background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+  }
+  .timer{
+    width: inherit;
+    display: flex;
+    text-align: center;
+  }
+
+
+  .hms{
+    width: inherit;
+    text-align: center;
+    font-family: var(--font-watch);
+    font-size: 70px;
+    margin: 10px 0 10px 0;
+    color: #FF9900;
+    -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon5 1.5s ease-in-out infinite alternate;
+    animation: neon5 1.5s ease-in-out infinite alternate;
+   
+  }
+
+  .ContainerControl{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+  }
+
+  .btcontol{
+    padding: 5px;
+    margin-right: 10px;
+    color:#1b1a1a;
+    background-color:chocolate;
+
+  }
+
+  .btcontol:hover{
+    -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon5 1.5s ease-in-out infinite alternate;
+    animation: neon5 1.5s ease-in-out infinite alternate;
+
+  }
+
+
+  .start , .reset{
+    cursor: pointer;
+    -webkit-box-shadow: 9px -4px 6px -2px rgba(0,0,0,0.71);
+    -moz-box-shadow: 9px -6px 4px -2px rgba(0,0,0,0.71);
+    box-shadow: 9px -4px 6px -2px rgba(0,0,0,0.71);
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .start:hover, .reset:hover {
+    border: 1px solid black;
+    border-radius: 5px;
+    /* color: rgba(0, 128, 0, 0.301); */
+    color: white;
+
+  }
+
+  .pause:hover{
+    border: 1px solid rgba(73, 80, 73, 0.301);
+    border-radius: 5px;
+    /* color:rgba(124, 4, 4, 0.301); */
+    color: white;
+
+  }
+  
+
+
+.ContainerBy{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.ContainerBy > p{
+  width: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: var(--font-mon);
+
+}
+
+
+@keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff, 
+                0 0 20px #fff, 
+                0 0 30px #fff, 
+                0 0 40px #FF9900, 
+                0 0 70px #FF9900, 
+                0 0 80px #FF9900, 
+                0 0 100px #FF9900, 
+                0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 
+                0 0 10px #fff, 
+                0 0 15px #fff, 
+                0 0 20px #FF9900, 
+                0 0 35px #FF9900, 
+                0 0 40px #FF9900, 
+                0 0 50px #FF9900, 
+                0 0 75px #FF9900;
+  }
+}
+
+@keyframes neon1{
+    from {
+      text-shadow: 0 0 10px #fff, 
+                  0 0 20px #fff, 
+                  0 0 30px #fff, 
+                  0 0 40px black, 
+                  0 0 70px black, 
+                  0 0 80px black, 
+                  0 0 100px black, 
+                  0 0 150px black;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 
+                  0 0 10px #fff, 
+                  0 0 15px #fff, 
+                  0 0 20px black, 
+                  0 0 35px black, 
+                  0 0 40px black, 
+                  0 0 50px black, 
+                  0 0 75px black;
+    }
+
+}
+
+  /* Efecto neon tomado del siguiente link: https://codepen.io/FelixRilling/pen/qzfoc */
