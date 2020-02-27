@@ -1,10 +1,10 @@
 {
   "name": "cronometro",
   "version": "1.0.0",
-  "description": "",
+  "description": "App simula un cronometro en una pantalla con luces de neon",
   "main": "index.js",
   "keywords": [],
-  "author": "",
+  "author": "Juan Teixeira",
   "license": "ISC",
   "scripts": {
     "start": "live-server",
