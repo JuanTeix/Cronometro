@@ -15,25 +15,18 @@ class Cronometro {
         document.querySelector('.s').innerHTML = (seg < 10 ? (`0${seg}`) : seg)     
     }
 
-    removerClass(Boo){
-         let btnPlay = document.getElementsByClassName("start");
-        if(Boo){
-            for (var i = 0; i<btnPlay.length; i++) {
-                btnPlay[i].classList.add("icon-pause2");
-                btnPlay[i].classList.add("pause");
-                btnPlay[i].classList.remove("icon-play3");
-                btnPlay[i].classList.remove("start");
-            }
-         }
-         else{
-            let btnPause = document.getElementsByClassName("pause");
-            for (var i = 0; i<btnPause.length; i++) {
-                btnPause[i].classList.add("icon-play3");
-                btnPause[i].classList.add("start");
-                btnPause[i].classList.remove("icon-pause2");
-                btnPause[i].classList.remove("pause");
-            }
-         }
+    removerClass(){
+        if(btnPlayPausa.classList.contains('icon-play3')){
+            btnPlayPausa.classList.remove("icon-play3");
+            // btnPlayPausa.classList.remove("start");
+            btnPlayPausa.classList.add("icon-pause2");
+            // btnPlayPausa.classList.add("pause");
+        }else{
+            btnPlayPausa.classList.add("icon-play3");
+            // btnPlayPausa.classList.add("start");
+            btnPlayPausa.classList.remove("icon-pause2");
+            // btnPlayPausa.classList.remove("pause");
+        }
     }
 
     start(){
@@ -48,8 +41,7 @@ class Cronometro {
 
     play(){
         ini = false;
-        btnCrtBoo = true
-        Timer.removerClass(btnCrtBoo)
+        Timer.removerClass()
         inter = setInterval(() => {
                 seg++
                 if(seg === 60){
@@ -72,8 +64,7 @@ class Cronometro {
             
     pause(){
         ini = true
-        btnCrtBoo = false
-        Timer.removerClass(btnCrtBoo)
+        Timer.removerClass()
         clearInterval(inter)    
         }
 
@@ -87,15 +78,14 @@ class Cronometro {
         }
 }
     const Timer = new Cronometro(00, 00, 00) 
-    const btPlay = document.querySelector('.start')
     const btReset = document.querySelector('.reset')
+    const btnPlayPausa = document.getElementById('Botones')
     let inter        
-    let btnCrtBoo
     let seg  
     let min 
     let hr 
     let ini = true;
-    btPlay.onclick = () => Timer.toggel(ini)
+    btnPlayPausa.onclick = () => Timer.toggel(ini)
     btReset.onclick = () => Timer.refresh()
     Timer.start()
 
