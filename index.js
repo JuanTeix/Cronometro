@@ -15,17 +15,14 @@ class Cronometro {
         document.querySelector('.s').innerHTML = (seg < 10 ? (`0${seg}`) : seg)     
     }
 
-    removerClass(){
+    removerClass(n){
         if(btnPlayPausa.classList.contains('icon-play3')){
             btnPlayPausa.classList.remove("icon-play3");
-            // btnPlayPausa.classList.remove("start");
             btnPlayPausa.classList.add("icon-pause2");
-            // btnPlayPausa.classList.add("pause");
+
         }else{
-            btnPlayPausa.classList.add("icon-play3");
-            // btnPlayPausa.classList.add("start");
             btnPlayPausa.classList.remove("icon-pause2");
-            // btnPlayPausa.classList.remove("pause");
+            btnPlayPausa.classList.add("icon-play3");
         }
     }
 
@@ -75,6 +72,8 @@ class Cronometro {
         refresh(){
             Timer.pause()   
             Timer.start()
+            btnPlayPausa.classList.remove("icon-pause2");
+            btnPlayPausa.classList.add("icon-play3");
         }
 }
     const Timer = new Cronometro(00, 00, 00) 
