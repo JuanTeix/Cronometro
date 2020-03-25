@@ -1,11 +1,11 @@
-##Cronometro
+# Cronometro
 
 - Es una app basica que toma el tiempo transcurrido.
 # 
 
 
 
-###Caracteristicas
+## Caracteristicas
 
 - Desarrolada en JS Vanilla
 - Live-server
@@ -13,10 +13,10 @@
 # 
 
 
-###Links
+### Links
 
-https://www.npmjs.com/package/live-server
-https://nodejs.org/es/
-https://codepen.io/FelixRilling/pen/qzfoc
+[https://www.npmjs.com/package/live-server](https://www.npmjs.com/package/live-server "https://www.npmjs.com/package/live-server")
+[https://nodejs.org/es/](https://nodejs.org/es/ "https://nodejs.org/es/")
+[https://codepen.io/FelixRilling/pen/qzfoc](https://codepen.io/FelixRilling/pen/qzfoc)
 
 # 
